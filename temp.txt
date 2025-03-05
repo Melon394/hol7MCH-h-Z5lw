@@ -1,0 +1,40 @@
+! Title: temp
+! Version: 2025-03-05
+! Description: none
+
+
+! new rules
+etoland.co.kr#@#div[class$="_ad"]
+greenium.kr##.active.bod-block-popup-overlay
+greenium.kr##.active.undefined.bod-block-popup-wrap
+m.cafe.naver.com##.join_layer
+m.search.naver.com#@#section[class*="ad_"]
+m.smartstore.naver.com,m.brand.naver.com##div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
+nzyuri.com###myModal
+nzyuri.com##.h25, .h30, .h50
+nzyuri.com##.post-wrap
+nzyuri.com##[id*='-ad-player_']
+nzyuri.com##[id^='video-overlay-player_']
+smartstore.naver.com,brand.naver.com##.detail_viewer > div:has(._nlog_click[aria-haspopup]):has-text(광고)
+||panorama.wixapps.net^
+~auction.co.kr##[class*='anner']:has(div[style^='height:2'])
+ㅡ
+@@||nzyuri.com^$generichide
+nzyuri.com#%#//scriptlet('remove-attr', 'oncontextmenu|controlslist')
+
+
+! already added rules
+
+
+! quick fixes
+auction.co.kr#@#[class*='anner']:has(div[style^='height:2'])
+||statcounter.com^$badfilter
+
+
+! experimental
+! @@||sia.internet.apps.samsung.com^$important
+
+
+! passive
+@@||arca.live^$extension="Auto Simya"
+@@||dcinside.com$cookie=_ga
