@@ -2,9 +2,9 @@
 ! Version: 2025-03-08
 ! Description: none
 
+
 ! new rules
 ##[href*='/adclick.php']
-@@/.*/$permissions=identity-credentials-get=(),document,domain=slrclub.com
 a-ha.io##div[style^=height]:has([href*='utm_source']):upward(2)
 avsee.*,avsee.ru##[alt$='gif']
 etoland.co.kr##.main_left_ad
@@ -19,8 +19,8 @@ m.search.naver.com##.fds-comps-header-headline:has-text(/^리빙 인플루언서
 m.search.naver.com#@#section[class*="ad_"]
 m.smartstore.naver.com,m.brand.naver.com##div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
 new-m.pay.naver.com##[class^='AiTEMS_article__']
+new-m.pay.naver.com##[class^='PayService_banner__']
 new-m.pay.naver.com##[class*='RecommendBanner_article__']
-new-m.pay.naver.com##div[class^='PayService_banner__']
 nzyuri.com###myModal
 nzyuri.com##.h25, .h30, .h50
 nzyuri.com##.post-wrap
@@ -31,20 +31,34 @@ smartstore.naver.com,brand.naver.com##.detail_viewer > div:has(._nlog_click[aria
 video.kakao.com#@#.list_share
 ||panorama.wixapps.net^
 ~auction.co.kr##[class*='anner']:has(div[style^='height:2'])
+munit.co.kr##.widget-side > div.widget-box > div
+m.cafe.naver.com##[href^='https://tracking.joongna.com/']
+m.cafe.naver.com##[href^='https://vvd.bz/']
+bada.us,bada.io,bada.*##.gpt-mobile
+bada.us,bada.io,bada.*##.iframe_amazon
+ddanzi.com###banner_ddanzi_market
+ddanzi.com##[class^='add_display']
+teamblind.com##.today_price.swiper-slide
+##iframe[src*='ad.doorigo.co.kr']
 ㅡ
+
 
 ! already added rules
 @@||nzyuri.com^$generichide
 m.ruliweb.com#@##timeline
 nzyuri.com#%#//scriptlet('remove-attr', 'oncontextmenu|controlslist')
 
+
 ! quick fixes
+#@#div[style*='height']:has(iframe):not(:has([class])):not(:has(p)):not(:has(span))
 auction.co.kr#@#[class*='anner']:has(div[style^='height:2'])
 m.fmkorea.com#@%#//scriptlet('set-cookie-reload', 'html5_video_default_muted', 'true')
 ||statcounter.com^$badfilter
 
+
 ! experimental
-! @@||sia.internet.apps.samsung.com^$important
+##div[style*='height']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
+##div[style*='text-align:']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
 
 
 ! passive
