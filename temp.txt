@@ -1,24 +1,31 @@
 ! Title: temp
-! Version: 2025-03-08
+! Version: 2025-03-09
 ! Description: none
 
 
 ! new rules
+##[id] > p +div[style*='height']:not(:has([class]))
+##iframe[src*='sga.mobisup.com']
+dispatch.co.kr##.page-post-article.page-post-font > div
+||*-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/embed_lib_v1.0.13.js$domain=dispatch.co.kr
+||analytics*.dispatch.co.kr^
+||sga.mobisup.com^
 ㅡ
 
 
 ! already added rules
+##[class*='anner']:has([target='_blank']:has(img[alt][src][width^='100%']))
+##div[style*='height']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
+##div[style*='text-align']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
 
 
 ! quick fixes
 [$path=10050146]m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):style(opacity:0.1!important;)
 [$path=10050146]m.cafe.naver.com#@#div.item_wrap:has([style*='/1_150.svg'])
+auction.co.kr#@#[class*='anner']:has(div[style^='height:2'])
 
 
 ! experimental
-##[class*='anner']:has(img[src][width^='100%'])
-##div[style*='height']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
-##div[style*='text-align']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
 
 
 ! passive
