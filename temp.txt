@@ -11,13 +11,17 @@
 
 
 ! quick fixes
+[$path=10050146]m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):style(opacity:0.1!important;)
+[$path=10050146]m.cafe.naver.com#@#div.item_wrap:has([style*='/1_150.svg'])
 
 
 ! experimental
+##[class*='anner']:has(img[src][width^='100%'])
 ##div[style*='height']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
-##div[style*='text-align:']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
+##div[style*='text-align']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
 
 
 ! passive
 @@||arca.live^$extension="Auto Simya"
 @@||dcinside.com$cookie=_ga
+m.dcinside.com##.gall-detail-lst > li:has-text(/메스이키|키작|상혁|상 혁|롤드컵|페이커|젠지|키170|섹카오|토막|사다새|♿|즉정|만삐|g i f|BJ|했제|벗 방|했●제|했■제|찐따폰|찐 따 폰|테무|테,무|테mu|틱,톡|테 무|공부많이|키168|키 168|168cm|av 찾는|네 이 버|꿀 통|내국|좆대남|변우석|키 190|로또 일 등/)
