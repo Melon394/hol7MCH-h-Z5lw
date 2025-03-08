@@ -4,13 +4,17 @@
 
 
 ! new rules
-##[id] > p +div[style*='height']:not(:has([class]))
+##[id] > p +div[style*='height']:not(:has([class])):not(:has(p)):not(:has(span))
+##[id] > p +div[style*='text-align']:not(:has([class])):not(:has(p)):not(:has(span))
 ##iframe[src*='sga.mobisup.com']
 dispatch.co.kr##.page-post-article.page-post-font > div
+m.enter.etoday.co.kr###content > .box
 ||*-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/embed_lib_v1.0.13.js$domain=dispatch.co.kr
 ||analytics*.dispatch.co.kr^
+||dgtstream.com^
 ||sga.mobisup.com^
 ㅡ
+/news$removeparam=ref
 
 
 ! already added rules
