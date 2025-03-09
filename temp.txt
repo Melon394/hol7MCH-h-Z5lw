@@ -1,13 +1,19 @@
 ! Title: temp
-! Version: 2025-03-09
+! Version: 2025-03-10
 ! Description: none
 
 
 ! new rules
+cloudflare.com##.site-content > div.fixed.bottom-0
 ㅡ
 
 
 ! already added rules
+@@/(new|mana|book)toki\d*\.(com|net|org)/$extension="Enhanced Image Sheet Viewer"
+@@||danbooru.donmai.us^$extension="Enhanced Image Sheet Viewer"
+@@||gelbooru.com^$extension="Enhanced Image Sheet Viewer"
+@@||konachan.com^$extension="Enhanced Image Sheet Viewer"
+@@||yande.re^$extension="Enhanced Image Sheet Viewer"
 
 
 ! quick fixes
