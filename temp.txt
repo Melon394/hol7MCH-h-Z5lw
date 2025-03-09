@@ -4,29 +4,13 @@
 
 
 ! new rules
-##[id] > p +div[style*='height']:not(:has([class])):not(:has(p)):not(:has(span))
-##[id] > p +div[style*='text-align']:not(:has([class])):not(:has(p)):not(:has(span))
-##iframe[src*='sga.mobisup.com']
-dispatch.co.kr##.page-post-article.page-post-font > div
-m.enter.etoday.co.kr###content > .box
-||*-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/embed_lib_v1.0.13.js$domain=dispatch.co.kr
-||analytics*.dispatch.co.kr^
-||dgtstream.com^
-||sga.mobisup.com^
 ㅡ
-/news$removeparam=ref
 
 
 ! already added rules
-##[class*='anner']:has([target='_blank']:has(img[alt][src][width^='100%']))
-##div[style*='height']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
-##div[style*='text-align']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
 
 
 ! quick fixes
-[$path=10050146]m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):style(opacity:0.1!important;)
-[$path=10050146]m.cafe.naver.com#@#div.item_wrap:has([style*='/1_150.svg'])
-auction.co.kr#@#[class*='anner']:has(div[style^='height:2'])
 
 
 ! experimental
@@ -35,4 +19,3 @@ auction.co.kr#@#[class*='anner']:has(div[style^='height:2'])
 ! passive
 @@||arca.live^$extension="Auto Simya"
 @@||dcinside.com$cookie=_ga
-m.dcinside.com##.gall-detail-lst > li:has-text(/메스이키|키작|상혁|상 혁|롤드컵|페이커|젠지|키170|섹카오|토막|사다새|♿|즉정|만삐|g i f|BJ|했제|벗 방|했●제|했■제|찐따폰|찐 따 폰|테무|테,무|테mu|틱,톡|테 무|공부많이|키168|키 168|168cm|av 찾는|네 이 버|꿀 통|내국|좆대남|변우석|키 190|로또 일 등/)
