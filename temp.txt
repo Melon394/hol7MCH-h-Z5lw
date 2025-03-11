@@ -20,10 +20,9 @@ harpi.in##div:has(> script[src])
 
 
 ! experimental
-*##[class*='banner'][id]:has([target='_blank'])
 *##[class*='carousel'][id]:has([target='_blank'])
-*##[href*='/ad'][target='_blank']:has(img[src])
-*##[target='_blank']:has([src*='/AD'])
+*##[href*='/ad'][target='_blank']:has(img[src]):not(:has(p))
+*##[target='_blank']:has([src*='/AD/'])
 
 
 ! passive
