@@ -14,15 +14,13 @@ harpi.in##div:has(> script[src])
 
 
 ! quick fixes
-*#@#div[style*='width: 300px; height: 250px;']
-*#@#div[style*='width:300px; height:250px;']
-*#@#div[style*='width:300px;height:250px;']
+#@#div[style*='width: 300px; height: 250px;']
+#@#[class*='anner']:has(ins.adsbygoogle)
 
 
 ! experimental
-*##[class*='carousel'][id]:has([target='_blank'])
-*##[href*='/ad'][target='_blank']:has(img[src]):not(:has(p))
-*##[target='_blank']:has([src*='/AD/'])
+*##[class*='banner'][id]:has([href][target='_blank']:has(img[src]))
+*##[class*='carousel'][id]:has([href][target='_blank']:has(img[src]))
 
 
 ! passive
