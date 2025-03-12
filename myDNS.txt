@@ -12,6 +12,7 @@
 @@||onelink.me^
 ||action.adoffice.11st.co.kr^$badfilter
 ||adcr.naver.com^$badfilter
+||aibixby.com^$badfilter
 ||buzzvil.com^$badfilter
 ||displayad.lotteon.com^$badfilter
 ||innorame.com^$badfilter
