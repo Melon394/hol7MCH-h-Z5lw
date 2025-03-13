@@ -1,10 +1,13 @@
 ! Title: temp
-! Version: 2025-03-12
+! Version: 2025-03-13
 ! Description: none
 
 
 ! new rules
 harpi.in##div:has(> script[src])
+issuelink.co.kr##.swal-overlay--show-modal.swal-overlay
+issuelink.co.kr##.text-center
+issuelink.co.kr#@#table.table-stripped tr:is(:has(.ad), :has(.adsbygoogle))
 sports.chosun.com##div.mobile-ad:has([class^='adfork'])
 tistory.com##[href^='https://link.coupang.com/']
 ||adtracking.smartmediarep.com^
@@ -14,7 +17,8 @@ tistory.com##[href^='https://link.coupang.com/']
 ||private-stage.com^$redirect=noopjs
 ㅡ
 @@||harpi.in^$extension="웹 사이트에서 이미지 해상도 오버레이 표시"
-dcinside.com$$script:has-text(/pwlink|taboola|blockedState/)
+dcinside.com$$script:has-text(/pwlink|taboola|blockedState|wcs_add/)
+m.search.naver.com#%#//scriptlet('trusted-click-element', '._option_on_off.option.tab', '', '1000')
 
 
 ! already added rules
@@ -26,6 +30,9 @@ dcinside.com$$script:has-text(/pwlink|taboola|blockedState/)
 #@#div[style*='height']:has(iframe):not(:has([src*='recaptcha'])):not(:has(p)):not(:has(span))
 #@#div[style*='width: 300px; height: 250px;']
 @@||hkstatic.hankyung.com^
+@@||smartmediarep.com^$media,domain=donga.com|~mlbpark.donga.com,badfilter
+tv.nate.com#@#[class*='anner']:has([target='_blank']:has(img[alt*='광고']))
+tv.nate.com#@#[class*='anner']:has([target='_blank']:has(img[alt*='배너']))
 
 
 ! experimental
