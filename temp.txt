@@ -4,14 +4,17 @@
 
 
 ! new rules
-
+웹툴.com##.justify-center.items-center.flex-row.flex
 ㅡ
 
 
 ! already added rules
+m.ssg.com##.css-0.wrap > div[style]:first-child
 
 
 ! quick fixes
+m.ssg.com,m-emart.ssg.com#@#.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
+m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
 
 
 ! experimental
