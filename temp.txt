@@ -4,8 +4,12 @@
 
 
 ! new rules
+###immersive-translate-popup
+zod.kr##.app-header-menu__content > .tw-mb-5 > [href^='https://zod.kr/go/']
 ||apidog.com^
+||firebase-settings.crashlytics.com^
 ㅡ
+@@||myani.app^$stealth=referrer
 
 
 ! already added rules
@@ -29,5 +33,3 @@ text-compare.com#@#body:has-text(pierrotmalls@domain.com)
 
 
 ! temp
-||smartlink.mk^$all
-||snip.ink^$all
