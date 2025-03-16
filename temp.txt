@@ -1,10 +1,10 @@
 ! Title: temp
-! Version: 2025-03-15
+! Version: 2025-03-16
 ! Description: none
 
 
 ! new rules
-웹툴.com##.justify-center.items-center.flex-row.flex
+||apidog.com^
 ㅡ
 
 
@@ -15,6 +15,8 @@ m.ssg.com##.css-0.wrap > div[style]:first-child
 ! quick fixes
 m.ssg.com,m-emart.ssg.com#@#.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
 m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
+||search.naver.com^$removeparam=/^(oquery|sm|ssc)=/,badfilter
+||search.naver.com^$removeparam=oquery
 
 
 ! experimental
@@ -23,3 +25,9 @@ m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_
 ! passive
 @@||arca.live^$extension="Auto Simya"
 @@||dcinside.com$cookie=_ga
+text-compare.com#@#body:has-text(pierrotmalls@domain.com)
+
+
+! temp
+||smartlink.mk^$all
+||snip.ink^$all
