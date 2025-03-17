@@ -1,19 +1,23 @@
 ! Title: temp
-! Version: 2025-03-16
+! Version: 2025-03-17
 ! Description: none
 
 
 ! new rules
-###immersive-translate-popup
 zod.kr##.app-header-menu__content > .tw-mb-5 > [href^='https://zod.kr/go/']
 ||apidog.com^
+||dts-log.anker.com^
+||eufy-log-ci.anker-in.com^
 ||firebase-settings.crashlytics.com^
+||google.com/ads/measurement/t
 ㅡ
+||d2htfo7ft368vg.cloudfront.net^$app=com.oceanwing.soundcore
 @@||myani.app^$stealth=referrer
 
 
 ! already added rules
 m.ssg.com##.css-0.wrap > div[style]:first-child
+||clients1.google.com^$app=com.google.android.apps.translate
 
 
 ! quick fixes
