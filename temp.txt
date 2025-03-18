@@ -1,10 +1,13 @@
 ! Title: temp
-! Version: 2025-03-17
+! Version: 2025-03-19
 ! Description: none
 
 
 ! new rules
-zod.kr##.app-header-menu__content > .tw-mb-5 > [href^='https://zod.kr/go/']
+##.basic-banner
+m.cafe.daum.net##.bottom_banner
+zod.kr##[href^='https://zod.kr/go/']
+zod.kr##[href='https://zod.kr/notice/1342219']
 ||apidog.com^
 ||dts-log.anker.com^
 ||eufy-log-ci.anker-in.com^
@@ -12,6 +15,8 @@ zod.kr##.app-header-menu__content > .tw-mb-5 > [href^='https://zod.kr/go/']
 ||google.com/ads/measurement/t
 ㅡ
 ||d2htfo7ft368vg.cloudfront.net^$app=com.oceanwing.soundcore
+||ohou.se^$removeparam=airbridge_referrer
+@@||clipchamp.com^$extension="Disable WebGL API"
 @@||myani.app^$stealth=referrer
 
 
@@ -23,6 +28,7 @@ m.ssg.com##.css-0.wrap > div[style]:first-child
 ! quick fixes
 m.ssg.com,m-emart.ssg.com#@#.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
 m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
+||*.top^$doc,domain=~caitlin.top|~h5player.*|~lux-hentai.top|~hjm79.top|~search.naver.com,badfilter
 ||search.naver.com^$removeparam=/^(oquery|sm|ssc)=/,badfilter
 ||search.naver.com^$removeparam=oquery
 
