@@ -6,6 +6,12 @@
 ! new rules
 ##.basic-banner
 m.cafe.daum.net##.bottom_banner
+reddit.com###blocking-modal
+reddit.com###blocking-modal:remove()
+reddit.com###nsfw-desktop-auth-blocking-modal-dialog
+reddit.com###nsfw-desktop-auth-blocking-modal-overlay-element
+reddit.com###nsfw-qr-dialog
+reddit.com##body > div[style='position: fixed; inset: 0px; backdrop-filter: blur(4px);']
 zod.kr##[href^='https://zod.kr/go/']
 zod.kr##[href='https://zod.kr/notice/1342219']
 ||apidog.com^
@@ -13,11 +19,20 @@ zod.kr##[href='https://zod.kr/notice/1342219']
 ||eufy-log-ci.anker-in.com^
 ||firebase-settings.crashlytics.com^
 ||google.com/ads/measurement/t
+||redditstatic.com/shreddit/*/xpromo-untagged-content-blocking-modal-$script
+||redditstatic.com/shreddit/*/xpromo-nsfw-bypassable-modal-desktop-$script
 ㅡ
 ||d2htfo7ft368vg.cloudfront.net^$app=com.oceanwing.soundcore
+||kdnl-skb-*.play.kakao.com^$app=com.kakao.talk
+ㅡ
 ||ohou.se^$removeparam=airbridge_referrer
+ㅡ
 @@||clipchamp.com^$extension="Disable WebGL API"
 @@||myani.app^$stealth=referrer
+embed.reddit.com#%#//scriptlet('remove-attr', 'autoplay', 'shreddit-player')
+embed.reddit.com#%#//scriptlet('remove-attr', 'href', 'a:has(shreddit-player)')
+reddit.com#%#//scriptlet('hide-in-shadow-dom', '.prompt:has([name="view-in-app-button"])')
+litomi.vercel.app#%#//scriptlet('trusted-click-element', 'a[href="/manga"')
 
 
 ! already added rules
@@ -28,6 +43,7 @@ m.ssg.com##.css-0.wrap > div[style]:first-child
 ! quick fixes
 m.ssg.com,m-emart.ssg.com#@#.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
 m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
+reddit.com#@%#//scriptlet('hide-in-shadow-dom', '.prompt:has(> .viewInApp)')
 ||*.top^$doc,domain=~caitlin.top|~h5player.*|~lux-hentai.top|~hjm79.top|~search.naver.com,badfilter
 ||search.naver.com^$removeparam=/^(oquery|sm|ssc)=/,badfilter
 ||search.naver.com^$removeparam=oquery
