@@ -1,10 +1,14 @@
 ! Title: temp
-! Version: 2025-03-19
+! Version: 2025-03-21
 ! Description: none
 
 
 ! new rules
 ##.basic-banner
+##.happy-header
+avjoa69.com##[id^='imgDiv'] > table
+avjoa69.com##u-chat
+ledesk.co.kr##.on.layer_box
 m.cafe.daum.net##.bottom_banner
 reddit.com###blocking-modal
 reddit.com###blocking-modal:remove()
@@ -41,6 +45,7 @@ m.ssg.com##.css-0.wrap > div[style]:first-child
 
 
 ! quick fixes
+@@||t1.daumcdn.net/*/static/kp.js$script,important
 m.ssg.com,m-emart.ssg.com#@#.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
 m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
 reddit.com#@%#//scriptlet('hide-in-shadow-dom', '.prompt:has(> .viewInApp)')
