@@ -1,5 +1,5 @@
 ! Title: temp
-! Version: 2025-03-21
+! Version: 2025-03-23
 ! Description: none
 
 
@@ -9,14 +9,17 @@
 avjoa69.com###tracking-url
 avjoa69.com##[id^='imgDiv'] > table
 avjoa69.com##u-chat
+instiz.net##.responsive_main.imgbox
+instiz.net##div[class]:has(> div[id^='sense'][style])
 ledesk.co.kr##.on.layer_box
 m.cafe.daum.net##.bottom_banner
-reddit.com###blocking-modal
+newstong.co.kr##.in.fade.modal:remove()
 reddit.com###blocking-modal:remove()
 reddit.com###nsfw-desktop-auth-blocking-modal-dialog
 reddit.com###nsfw-desktop-auth-blocking-modal-overlay-element
 reddit.com###nsfw-qr-dialog
 reddit.com##body > div[style='position: fixed; inset: 0px; backdrop-filter: blur(4px);']
+rule34.xxx###top
 zod.kr##[href^='https://zod.kr/go/']
 zod.kr##[href='https://zod.kr/notice/1342219']
 ||apidog.com^
@@ -26,14 +29,16 @@ zod.kr##[href='https://zod.kr/notice/1342219']
 ||google.com/ads/measurement/t
 ||redditstatic.com/shreddit/*/xpromo-untagged-content-blocking-modal-$script
 ||redditstatic.com/shreddit/*/xpromo-nsfw-bypassable-modal-desktop-$script
+||wcs.naver.net^
 ㅡ
 ||d2htfo7ft368vg.cloudfront.net^$app=com.oceanwing.soundcore
 ||kdnl-skb-*.play.kakao.com^$app=com.kakao.talk
 ㅡ
 [$domain=/^newtoki\d+.com/]##.banner
-[$domain=/^newtoki\d+.com/]##.clearfix > li:nth-of-type(4)
+||bit.ly^$all,badfilter
 ||ohou.se^$removeparam=airbridge_referrer
 ㅡ
+@@||arca.live^$stealth=dpi
 @@||clipchamp.com^$extension="Disable WebGL API"
 @@||myani.app^$stealth=referrer
 embed.reddit.com#%#//scriptlet('remove-attr', 'autoplay', 'shreddit-player')
@@ -48,8 +53,13 @@ m.ssg.com##.css-0.wrap > div[style]:first-child
 
 
 ! quick fixes
+##div[style*='text-align']:has(iframe):not(:has([src*='captcha'])):not(:has([src*='embed'])):not(:has(p)):not(:has(span))
+#@#div[style*='text-align']:has(iframe):not(:has([src*='captcha'])):not(:has(p)):not(:has(span))
 #@#li:has([target])
 @@||t1.daumcdn.net/*/static/kp.js$script,important
+[$domain=/^booktoki\d+.com/]##li:has([target]:not([href*=bbs]))
+[$domain=/^manatoki\d+.net/]##li:has([target]:not([href*=bbs]))
+[$domain=/^newtoki\d+.com/]##li:has([target]:not([href*=bbs]))
 [$domain=/^newtoki\d+.com/]#@#.clearfix > li:nth-of-type(4), .clearfix > li:nth-of-type(5)
 m.ssg.com,m-emart.ssg.com#@#.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
 m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
