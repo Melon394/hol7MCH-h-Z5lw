@@ -1,11 +1,15 @@
 ! Title: temp
-! Version: 2025-03-23
+! Version: 2025-03-24
 ! Description: none
 
 
 ! new rules
 ##.basic-banner
 ##.happy-header
+##.popup_left
+##[class$='-ads']:not(:has([class*='video']))
+##div.banner_m
+arca.live##.d-lg-none.topbar-area
 avjoa69.com###tracking-url
 avjoa69.com##[id^='imgDiv'] > table
 avjoa69.com##u-chat
@@ -23,6 +27,7 @@ rule34.xxx###top
 zod.kr##[href^='https://zod.kr/go/']
 zod.kr##[href='https://zod.kr/notice/1342219']
 ||apidog.com^
+||camp-report.naver.com^
 ||dts-log.anker.com^
 ||eufy-log-ci.anker-in.com^
 ||firebase-settings.crashlytics.com^
@@ -35,11 +40,15 @@ zod.kr##[href='https://zod.kr/notice/1342219']
 ||kdnl-skb-*.play.kakao.com^$app=com.kakao.talk
 ㅡ
 [$domain=/^newtoki\d+.com/]##.banner
-||bit.ly^$all,badfilter
+[$domain=/^ootv\d+.com/]##.mobile-padding > .mobile-padding
+[$domain=/^tkor\d+.com/]##[target='_blank']:has([src])
+[$domain=/^tkr\d+.com/]##[src*='blogger.googleusercontent.com']
+[$domain=/^yatoon\d+.com/]##.ad-form.container
 ||ohou.se^$removeparam=airbridge_referrer
 ㅡ
 @@||arca.live^$stealth=dpi
 @@||clipchamp.com^$extension="Disable WebGL API"
+@@||m.blog.naver.com^$extension="Enhanced Image Sheet Viewer"
 @@||myani.app^$stealth=referrer
 embed.reddit.com#%#//scriptlet('remove-attr', 'autoplay', 'shreddit-player')
 embed.reddit.com#%#//scriptlet('remove-attr', 'href', 'a:has(shreddit-player)')
@@ -53,10 +62,11 @@ m.ssg.com##.css-0.wrap > div[style]:first-child
 
 
 ! quick fixes
-##div[style*='text-align']:has(iframe):not(:has([src*='captcha'])):not(:has([src*='embed'])):not(:has(p)):not(:has(span))
+*##div[style*='text-align']:has(iframe):not(:has([src*='captcha'])):not(:has([src*='embed'])):not(:has(p)):not(:has(span))
+#@#[class$='-ads']:
 #@#div[style*='text-align']:has(iframe):not(:has([src*='captcha'])):not(:has(p)):not(:has(span))
 #@#li:has([target])
-@@||t1.daumcdn.net/*/static/kp.js$script,important
+@@||t1.daumcdn.net/*/static/kp.js$script
 [$domain=/^booktoki\d+.com/]##li:has([target]:not([href*=bbs]))
 [$domain=/^manatoki\d+.net/]##li:has([target]:not([href*=bbs]))
 [$domain=/^newtoki\d+.com/]##li:has([target]:not([href*=bbs]))
