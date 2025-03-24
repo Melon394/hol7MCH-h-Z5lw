@@ -4,79 +4,12 @@
 
 
 ! new rules
-##.basic-banner
-##.happy-header
-##.popup_left
-##[class$='-ads']:not(:has([class*='video']))
-##div.banner_m
-arca.live##.d-lg-none.topbar-area
-avjoa69.com###tracking-url
-avjoa69.com##[id^='imgDiv'] > table
-avjoa69.com##u-chat
-instiz.net##.responsive_main.imgbox
-instiz.net##div[class]:has(> div[id^='sense'][style])
-ledesk.co.kr##.on.layer_box
-m.cafe.daum.net##.bottom_banner
-newstong.co.kr##.in.fade.modal:remove()
-reddit.com###blocking-modal:remove()
-reddit.com###nsfw-desktop-auth-blocking-modal-dialog
-reddit.com###nsfw-desktop-auth-blocking-modal-overlay-element
-reddit.com###nsfw-qr-dialog
-reddit.com##body > div[style='position: fixed; inset: 0px; backdrop-filter: blur(4px);']
-rule34.xxx###top
-zod.kr##[href^='https://zod.kr/go/']
-zod.kr##[href='https://zod.kr/notice/1342219']
-||apidog.com^
-||camp-report.naver.com^
-||dts-log.anker.com^
-||eufy-log-ci.anker-in.com^
-||firebase-settings.crashlytics.com^
-||google.com/ads/measurement/t
-||redditstatic.com/shreddit/*/xpromo-untagged-content-blocking-modal-$script
-||redditstatic.com/shreddit/*/xpromo-nsfw-bypassable-modal-desktop-$script
-||wcs.naver.net^
-ㅡ
-||d2htfo7ft368vg.cloudfront.net^$app=com.oceanwing.soundcore
-||kdnl-skb-*.play.kakao.com^$app=com.kakao.talk
-ㅡ
-[$domain=/^newtoki\d+.com/]##.banner
-[$domain=/^ootv\d+.com/]##.mobile-padding > .mobile-padding
-[$domain=/^tkor\d+.com/]##[target='_blank']:has([src])
-[$domain=/^tkr\d+.com/]##[src*='blogger.googleusercontent.com']
-[$domain=/^yatoon\d+.com/]##.ad-form.container
-||ohou.se^$removeparam=airbridge_referrer
-ㅡ
-@@||arca.live^$stealth=dpi
-@@||clipchamp.com^$extension="Disable WebGL API"
-@@||m.blog.naver.com^$extension="Enhanced Image Sheet Viewer"
-@@||myani.app^$stealth=referrer
-embed.reddit.com#%#//scriptlet('remove-attr', 'autoplay', 'shreddit-player')
-embed.reddit.com#%#//scriptlet('remove-attr', 'href', 'a:has(shreddit-player)')
-reddit.com#%#//scriptlet('hide-in-shadow-dom', '.prompt:has([name="view-in-app-button"])')
-litomi.vercel.app#%#//scriptlet('trusted-click-element', 'a[href="/manga"')
 
 
 ! already added rules
-m.ssg.com##.css-0.wrap > div[style]:first-child
-||clients1.google.com^$app=com.google.android.apps.translate
 
 
 ! quick fixes
-*##div[style*='text-align']:has(iframe):not(:has([src*='captcha'])):not(:has([src*='embed'])):not(:has(p)):not(:has(span))
-#@#[class$='-ads']:
-#@#div[style*='text-align']:has(iframe):not(:has([src*='captcha'])):not(:has(p)):not(:has(span))
-#@#li:has([target])
-@@||t1.daumcdn.net/*/static/kp.js$script
-[$domain=/^booktoki\d+.com/]##li:has([target]:not([href*=bbs]))
-[$domain=/^manatoki\d+.net/]##li:has([target]:not([href*=bbs]))
-[$domain=/^newtoki\d+.com/]##li:has([target]:not([href*=bbs]))
-[$domain=/^newtoki\d+.com/]#@#.clearfix > li:nth-of-type(4), .clearfix > li:nth-of-type(5)
-m.ssg.com,m-emart.ssg.com#@#.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
-m.smartstore.naver.com,m.brand.naver.com#@#div.vcontainer_item > div:has(._nlog_click[aria-haspopup]):has-text(광고)
-reddit.com#@%#//scriptlet('hide-in-shadow-dom', '.prompt:has(> .viewInApp)')
-||*.top^$doc,domain=~caitlin.top|~h5player.*|~lux-hentai.top|~hjm79.top|~search.naver.com,badfilter
-||search.naver.com^$removeparam=/^(oquery|sm|ssc)=/,badfilter
-||search.naver.com^$removeparam=oquery
 
 
 ! experimental
