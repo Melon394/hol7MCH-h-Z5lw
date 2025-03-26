@@ -5,6 +5,8 @@
 
 ! new rules
 @@||photo.jtbc.co.kr/news/cms/etc/
+k-hentai.org###khSearchList > div:has-text(/scat|furry|vomit|toddlercon|torture/)
+k-hentai.org###khSearchList > div:has-text(/zenmai_kourogi|koushouin_teisetsu|kurono_taitsu|miyamoto_muga|pulpawoelbo|pokemon|yeoljoo/)
 news.jtbc.co.kr##.print-hide > div:has(iframe)
 tokenpost.kr##.article_bottom_section > :last-child
 ||11h11m.net^
@@ -32,7 +34,6 @@ tokenpost.kr##.article_bottom_section > :last-child
 ||opentelemetry.io^
 ||prd-analytics.lotteon.com^
 ||raygun.com^
-||sdk.bigin.io^
 ||securiti.ai^
 ||sentry-apollo.naver.com^
 ||sentry-fin.naver.com^
