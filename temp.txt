@@ -1,15 +1,59 @@
 ! Title: temp
-! Version: 2025-03-24
+! Version: 2025-03-27
 ! Description: none
 
 
 ! new rules
+@@||photo.jtbc.co.kr/news/cms/etc/
+news.jtbc.co.kr##.print-hide > div:has(iframe)
+tokenpost.kr##.article_bottom_section > :last-child
+||11h11m.net^
+||ad*.jinhak*.com^
+||advimg.khan.co.kr^
+||affiliazioniads.snai.it^
+||analytics.g.nexon.com^
+||analytics.nexon.com^
+||analytics.routinehub.co^
+||api.loganalytics.io^
+||apptrace.com^
+||bugly.qcloud.com^
+||cdn.signalfx.com^
+||collect-*.51.la^
+||collector.sports.naver.com^
+||crashlyticsreports-pa.googleapis.com^
+||cubot.eigene.io^
+||events.backtrace.io^
+||log.mmstat.com^
+||log.sports.naver.com^
+||log1.toup.net^
+||monitoring-pgw.g.kakaopay.com^
+||monitoring-pgw.kakaopay.com^
+||nlog.naver.com^
+||opentelemetry.io^
+||prd-analytics.lotteon.com^
+||raygun.com^
+||sdk.bigin.io^
+||securiti.ai^
+||sentry-apollo.naver.com^
+||sentry-fin.naver.com^
+||sentry.io^
+||skplanet.com^
+||sny.monosnap.com^
+||statlog.skt-id.co.kr^
+||techhub.co.kr^
+||trk.alba.co.kr^
+||trk.tand.kr^
+ㅡ
+@@||news.jtbc.co.kr^$extension="Text To link"
+@@||nexon.com^$stealth=dpi
 
 
 ! already added rules
 
 
 ! quick fixes
+namu.*##div[class*=' ']:not([class*='vfm__']):empty
+namu.*#@#div[class*=' ']:empty
 
 
 ! experimental
