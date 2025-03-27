@@ -5,6 +5,7 @@
 
 ! new rules
 @@||photo.jtbc.co.kr/news/cms/etc/
+arca.live##[src^='/static/assets/images/spoiler-alert.png?']:remove()
 k-hentai.org###khSearchList > div:has-text(/scat|furry|vomit|toddlercon|torture/)
 k-hentai.org###khSearchList > div:has-text(/zenmai_kourogi|koushouin_teisetsu|kurono_taitsu|miyamoto_muga|pulpawoelbo|pokemon|yeoljoo/)
 news.jtbc.co.kr##.print-hide > div:has(iframe)
@@ -45,8 +46,13 @@ tokenpost.kr##.article_bottom_section > :last-child
 ||trk.alba.co.kr^
 ||trk.tand.kr^
 ㅡ
+dlsite.com#%#//scriptlet('set-cookie-reload', 'adultchecked', '1')
+dlsite.com#%#//scriptlet('set-cookie-reload', 'localesuggested', 'true')
+ㅡ
+@@||arca.live/u/$extension="arca.live Reader Mode Improved"
 @@||news.jtbc.co.kr^$extension="Text To link"
 @@||nexon.com^$stealth=dpi
+dlsite.com#%#//scriptlet('trusted-set-cookie-reload', 'locale', 'ko-kr')
 
 
 ! already added rules
