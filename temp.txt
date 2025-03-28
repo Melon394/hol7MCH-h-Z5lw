@@ -1,32 +1,25 @@
 ! Title: temp
-! Version: 2025-03-27
+! Version: 2025-03-29
 ! Description: none
 
 
 ! new rules
-
+/*Gecko*$3p,script
+||elmagroup.ru^$all
 ㅡ
-
-ㅡ
-
-
-
-
+@@||twidouga.net^$extension="Embed Me!"
 
 ! already added rules
-
+namu.wiki##div[class*=' ']:not([class*='vfm__']):empty
 
 ! quick fixes
-
+@@||smartstore.naver.com^$stealth
 
 ! experimental
-
-
 
 ! passive
 @@||arca.live^$extension="Auto Simya"
 @@||dcinside.com$cookie=_ga
 text-compare.com#@#body:has-text(pierrotmalls@domain.com)
-
 
 ! temp
